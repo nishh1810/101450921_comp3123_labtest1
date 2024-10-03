@@ -1,14 +1,14 @@
-const resolvedPromise = () => {
+function resolvedPromise() {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ message: 'delayed success!' });
       }, 500);
     });
-  };
-  const rejectedPromise = () => {
+};
+function rejectedPromise() {
     return new Promise((_, reject) => {
-      setTimeout(() => {
-        reject({ error: 'delayed exception!' }); 
+        setTimeout(() => {
+            reject({ error: 'delayed exception!' }); 
       }, 500);
     });
   };
